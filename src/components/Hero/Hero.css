@@ -3,10 +3,9 @@
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding-top: var(--header-h, 120px);
+  padding-top: 120px;
   padding-bottom: 60px;
   overflow: hidden;
-  transition: padding-top 0.4s ease;
 }
 
 .hero__aurora {

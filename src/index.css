@@ -16,7 +16,6 @@
 
   --container: 1280px;
   --section-pad: clamp(64px, 10vw, 160px);
-  --header-h: 120px;
 
   color-scheme: dark;
 }

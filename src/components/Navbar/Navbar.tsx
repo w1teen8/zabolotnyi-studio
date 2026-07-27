@@ -14,7 +14,6 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [announcementOpen, setAnnouncementOpen] = useState(true);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -26,13 +25,6 @@ export default function Navbar() {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
   }, [menuOpen]);
 
-  useEffect(() => {
-    document.documentElement.style.setProperty(
-      '--header-h',
-      announcementOpen ? '120px' : '80px'
-    );
-  }, [announcementOpen]);
-
   return (
     <motion.header
       className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}
@@ -40,29 +32,6 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
     >
-      <AnimatePresence>
-        {announcementOpen && (
-          <motion.div
-            className="navbar__announcement"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 40, opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <span className="navbar__announcement-text">
-              <strong>Новинка:</strong> у нас з'явився новий інструмент дизайну — тепер сайти виглядають ще краще!
-            </span>
-            <button
-              className="navbar__announcement-close"
-              onClick={() => setAnnouncementOpen(false)}
-              aria-label="Закрити"
-            >
-              ✕
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <div className="container navbar__inner">
         <a href="#top" className="navbar__logo" data-cursor="link">
           <Logo size={38} />

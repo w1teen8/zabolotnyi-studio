@@ -32,47 +32,6 @@
   font-weight: 700;
 }
 
-.navbar__announcement {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  background: linear-gradient(120deg, var(--primary), var(--secondary));
-  padding-inline: 20px;
-}
-
-.navbar__announcement-text {
-  font-size: 13px;
-  font-weight: 500;
-  color: #fff;
-  text-align: center;
-  line-height: 40px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.navbar__announcement-text strong {
-  font-weight: 800;
-}
-
-.navbar__announcement-close {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  display: grid;
-  place-items: center;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.85);
-  border-radius: 50%;
-  transition: background 0.25s ease;
-}
-
-.navbar__announcement-close:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
 .navbar__logo-text {
   font-size: 15px;
   letter-spacing: -0.01em;
