@@ -1,14 +1,17 @@
 .project-card {
   position: relative;
+  height: 100%;
 }
 
 .project-card__tilt {
   position: relative;
+  height: 100%;
   transform-style: preserve-3d;
 }
 
 .project-card__flip {
   position: relative;
+  height: 100%;
   transform-style: preserve-3d;
   border-radius: 20px;
 }
@@ -21,6 +24,12 @@
   background: var(--card);
   overflow: hidden;
   transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card__face--front {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover .project-card__face--front {
@@ -109,6 +118,7 @@
 .project-card__body {
   position: relative;
   z-index: 2;
+  flex: 1;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -164,7 +174,8 @@
 .project-card__actions {
   display: flex;
   gap: 10px;
-  margin-top: 4px;
+  margin-top: auto;
+  padding-top: 4px;
 }
 
 .project-card__btn {
