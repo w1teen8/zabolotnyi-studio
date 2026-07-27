@@ -1,0 +1,25 @@
+.logo-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 28%;
+  background: linear-gradient(150deg, #60a5fa 0%, var(--primary) 45%, var(--secondary) 100%);
+  overflow: hidden;
+  box-shadow:
+    0 6px 16px -4px rgba(59, 130, 246, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -8px 12px -6px rgba(0, 0, 0, 0.35);
+}
+
+.logo-mark__sheen {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 100% at 20% -10%, rgba(255, 255, 255, 0.55), transparent 55%);
+}
+
+.logo-mark__glyph {
+  position: relative;
+  width: 62%;
+  height: 62%;
+}

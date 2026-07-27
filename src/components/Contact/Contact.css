@@ -1,0 +1,52 @@
+.contact {
+  position: relative;
+}
+
+.contact__aurora {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(60% 60% at 50% 50%, rgba(139, 92, 246, 0.12), transparent 70%);
+}
+
+.contact__card {
+  position: relative;
+  padding: clamp(48px, 8vw, 96px) clamp(24px, 6vw, 80px);
+  border-radius: 32px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(139, 92, 246, 0.08));
+  z-index: -1;
+}
+
+.contact__title {
+  font-size: clamp(32px, 5vw, 56px);
+  margin-top: 14px;
+  line-height: 1.1;
+}
+
+.contact__subtitle {
+  max-width: 480px;
+  margin: 24px auto 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact__actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 44px;
+  flex-wrap: wrap;
+}
+
+.contact__actions .btn svg {
+  width: 18px;
+  height: 18px;
+}

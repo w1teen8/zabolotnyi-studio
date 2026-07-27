@@ -1,0 +1,123 @@
+.laptop-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.laptop {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.laptop__glow {
+  position: absolute;
+  inset: -60px;
+  background: radial-gradient(circle at 50% 40%, rgba(59, 130, 246, 0.35), transparent 65%);
+  filter: blur(40px);
+  z-index: -1;
+}
+
+.laptop__screen {
+  position: relative;
+  border-radius: 16px 16px 6px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #050506;
+  box-shadow: 0 40px 100px -30px rgba(0, 0, 0, 0.8), 0 0 0 6px rgba(255, 255, 255, 0.02) inset;
+  overflow: hidden;
+}
+
+.laptop__bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #0d0d10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.laptop__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.laptop__dot--red { background: #ff5f57; }
+.laptop__dot--yellow { background: #febc2e; }
+.laptop__dot--green { background: #28c840; }
+
+.laptop__url {
+  margin-left: 10px;
+  font-size: 11px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3px 12px;
+  border-radius: 100px;
+  flex: 1;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.laptop__viewport {
+  position: relative;
+  aspect-ratio: 16 / 10.5;
+  overflow: hidden;
+  background: #0d0d10;
+}
+
+.laptop__shot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.laptop__base {
+  position: relative;
+  height: 14px;
+  margin: 0 -14px;
+  background: linear-gradient(180deg, #1a1a1f, #0a0a0c);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 14px 24px -10px rgba(0, 0, 0, 0.6);
+}
+
+.laptop__notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 80px;
+  height: 5px;
+  background: #050506;
+  border-radius: 0 0 6px 6px;
+}
+
+.laptop__dots-nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.laptop__dots-nav button {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.laptop__dots-nav button.active {
+  width: 22px;
+  border-radius: 4px;
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+}
+
+@media (max-width: 1024px) {
+  .laptop-wrap {
+    max-width: 460px;
+  }
+}

@@ -1,0 +1,60 @@
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  translate: -50% -50%;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.cursor-ring {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.35s ease, border-color 0.35s ease;
+}
+
+.cursor-ring--link {
+  width: 64px;
+  height: 64px;
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.cursor-ring--view {
+  width: 96px;
+  height: 96px;
+  background: linear-gradient(120deg, rgba(59, 130, 246, 0.25), rgba(139, 92, 246, 0.25));
+  border-color: transparent;
+  backdrop-filter: blur(4px);
+}
+
+.cursor-ring--drag {
+  width: 88px;
+  height: 88px;
+  background: rgba(139, 92, 246, 0.18);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.cursor-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #fff;
+  white-space: nowrap;
+}

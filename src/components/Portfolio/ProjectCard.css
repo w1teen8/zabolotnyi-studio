@@ -1,0 +1,218 @@
+.project-card {
+  position: relative;
+}
+
+.project-card__tilt {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.project-card__flip {
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+.project-card__face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--card-border);
+  background: var(--card);
+  overflow: hidden;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover .project-card__face--front {
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6), 0 0 40px -12px rgba(139, 92, 246, 0.25);
+}
+
+.project-card__face--back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__glow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-card__glow {
+  opacity: 1;
+}
+
+.browser-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.browser-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.browser-dot--red { background: #ff5f57; }
+.browser-dot--yellow { background: #febc2e; }
+.browser-dot--green { background: #28c840; }
+
+.browser-url {
+  margin-left: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3px 12px;
+  border-radius: 100px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-card__viewport {
+  position: relative;
+  aspect-ratio: 16 / 10.5;
+  overflow: hidden;
+  background: #0d0d10;
+  --scroll-depth: 0px;
+  --scroll-duration: 4s;
+}
+
+.project-card__shot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(0);
+  transition: transform var(--scroll-duration) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-card__shot {
+  transform: translateY(calc(-1 * var(--scroll-depth)));
+}
+
+.project-card__body {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project-card__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-card__heading h3 {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.project-card__category {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 100px;
+  color: var(--primary);
+  background: var(--primary-soft);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  white-space: nowrap;
+}
+
+.project-card__desc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-card__tech span {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-card__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.project-card__btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card__btn--primary {
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  color: #fff;
+}
+
+.project-card__btn--ghost {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--card-border);
+  color: var(--text-secondary);
+}
+
+.project-card__btn:hover {
+  transform: translateY(-2px);
+}
+
+.project-card__face--back .project-card__back-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+}
+
+.project-card__face--back h3 {
+  font-size: 22px;
+}
+
+.project-card__face--back p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.project-card__tech--back {
+  margin-bottom: 4px;
+}

@@ -1,0 +1,26 @@
+.footer {
+  border-top: 1px solid var(--card-border);
+  padding-block: 32px;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.footer__copy {
+  font-size: 13px;
+  color: var(--text-muted);
+}
