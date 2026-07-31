@@ -46,17 +46,6 @@ export default function Hero() {
             Zabolotnyi Studio
           </motion.span>
 
-          <motion.a
-            href="#pricing"
-            className="hero__price-badge"
-            data-cursor="link"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Вартість сайту — <strong>від $100</strong>
-          </motion.a>
-
           <h1 className="hero__title">
             <SplitText text="Створюємо сучасні сайти," delay={0.1} />
             <br />
@@ -73,7 +62,11 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 1.3, ease: [0.16, 1, 0.3, 1] }}
           >
             Modern Web Design &amp; Development — преміальні сайти для освіти, б'юті-індустрії,
-            HoReCa і не тільки. Від ідеї до запуску за 3–7 днів.
+            HoReCa і не тільки. Від ідеї до запуску за 3–7 днів. Вартість — від{' '}
+            <a href="#pricing" className="hero__subtitle-price" data-cursor="link">
+              $100
+            </a>
+            , залежно від функціоналу сайту.
           </motion.p>
 
           <motion.div
