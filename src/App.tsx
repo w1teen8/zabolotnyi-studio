@@ -6,6 +6,7 @@ import Stats from './components/Stats/Stats';
 import Portfolio from './components/Portfolio/Portfolio';
 import WhyUs from './components/WhyUs/WhyUs';
 import Process from './components/Process/Process';
+import Pricing from './components/Pricing/Pricing';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
@@ -24,6 +25,7 @@ function App() {
         <Portfolio />
         <WhyUs />
         <Process />
+        <Pricing />
         <Contact />
       </main>
       <Footer />

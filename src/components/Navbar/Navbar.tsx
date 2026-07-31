@@ -8,6 +8,7 @@ const links = [
   { href: '#portfolio', label: 'Портфоліо' },
   { href: '#why-us', label: 'Чому ми' },
   { href: '#process', label: 'Процес' },
+  { href: '#pricing', label: 'Ціна' },
   { href: '#contact', label: 'Контакти' },
 ];
 
