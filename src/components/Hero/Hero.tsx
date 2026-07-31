@@ -46,6 +46,17 @@ export default function Hero() {
             Zabolotnyi Studio
           </motion.span>
 
+          <motion.a
+            href="#pricing"
+            className="hero__price-badge"
+            data-cursor="link"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            Вартість сайту — <strong>$100–200</strong>
+          </motion.a>
+
           <h1 className="hero__title">
             <SplitText text="Створюємо сучасні сайти," delay={0.1} />
             <br />
