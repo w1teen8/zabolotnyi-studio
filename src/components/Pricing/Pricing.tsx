@@ -33,9 +33,9 @@ export default function Pricing() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="pricing__price">
-            <span className="pricing__amount gradient-text">$100–200</span>
+            <span className="pricing__amount gradient-text">від $100</span>
             <span className="pricing__note">
-              Точна сума залежить від обсягу та складності проєкту
+              Вартість залежить від функцій, які будуть присутні на сайті
             </span>
           </div>
 

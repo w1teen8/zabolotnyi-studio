@@ -54,7 +54,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Вартість сайту — <strong>$100–200</strong>
+            Вартість сайту — <strong>від $100</strong>
           </motion.a>
 
           <h1 className="hero__title">
