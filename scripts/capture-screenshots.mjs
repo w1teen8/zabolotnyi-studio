@@ -6,8 +6,9 @@ import fs from 'node:fs';
 
 // keep in sync with src/data/projects.ts
 const projects = [
+  ['cleaning-website', 'https://w1teen8.github.io/cleaning-website/'],
   ['glow-grammar', 'https://glowgrammar.com'],
-  ['upgrade-nmt', 'https://w1teen8.github.io/upgrade-nmt/'],
+  ['upgrade-nmt', 'https://upgradenmt.com'],
   ['bonforme', 'https://w1teen8.github.io/bonforme/'],
   ['4sezona', 'https://w1teen8.github.io/4sezona/'],
   ['marafet-studio', 'https://w1teen8.github.io/marafet-studio/'],
