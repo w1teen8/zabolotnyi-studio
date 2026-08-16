@@ -4,7 +4,8 @@ export type Category =
   | 'Кафе'
   | 'Тату'
   | 'Розваги'
-  | 'Кондитерські';
+  | 'Кондитерські'
+  | 'Клінінг';
 
 export interface Project {
   id: string;
@@ -23,9 +24,18 @@ export const categories: Array<Category | 'Всі'> = [
   'Тату',
   'Розваги',
   'Кондитерські',
+  'Клінінг',
 ];
 
 export const projects: Project[] = [
+  {
+    id: 'cleaning-website',
+    name: 'NEAT.',
+    url: 'https://w1teen8.github.io/cleaning-website/',
+    description: 'Преміальний сайт-візитка клінінгової компанії для дому та бізнесу.',
+    category: 'Клінінг',
+    tech: ['HTML5', 'CSS3', 'GSAP'],
+  },
   {
     id: 'glow-grammar',
     name: 'Glow Grammar',
@@ -37,7 +47,7 @@ export const projects: Project[] = [
   {
     id: 'upgrade-nmt',
     name: 'UpGrade NMT',
-    url: 'https://w1teen8.github.io/upgrade-nmt/',
+    url: 'https://upgradenmt.com',
     description: 'Повноцінна платформа підготовки до НМТ.',
     category: 'Освіта',
     tech: ['JavaScript', 'CSS3', 'GSAP'],
