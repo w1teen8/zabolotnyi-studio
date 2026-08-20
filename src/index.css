@@ -12,6 +12,7 @@
   --text-muted: #6b7280;
 
   --font-display: 'Manrope', system-ui, sans-serif;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
   --container: 1280px;
@@ -58,11 +59,11 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-weight: 700;
   color: var(--text);
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 p {
