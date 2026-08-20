@@ -61,11 +61,11 @@ export const projects: Project[] = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
   },
   {
-    id: '4sezona',
-    name: '4 Сезони',
-    url: 'https://w1teen8.github.io/4sezona/',
-    description: 'Сайт салону краси з каталогом послуг та онлайн-записом.',
-    category: 'Краса',
+    id: 'svoi-gastrocafe',
+    name: 'Гастрокафе «СВОЇ»',
+    url: 'https://w1teen8.github.io/svoi-gastrocafe/',
+    description: 'Сайт гастрокафе з меню, атмосферними фото та бронюванням столика.',
+    category: 'Кафе',
     tech: ['HTML5', 'CSS3', 'JavaScript'],
   },
   {
@@ -117,11 +117,11 @@ export const projects: Project[] = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
   },
   {
-    id: 'svoi-gastrocafe',
-    name: 'Гастрокафе «СВОЇ»',
-    url: 'https://w1teen8.github.io/svoi-gastrocafe/',
-    description: 'Сайт гастрокафе з меню, атмосферними фото та бронюванням столика.',
-    category: 'Кафе',
+    id: '4sezona',
+    name: '4 Сезони',
+    url: 'https://w1teen8.github.io/4sezona/',
+    description: 'Сайт салону краси з каталогом послуг та онлайн-записом.',
+    category: 'Краса',
     tech: ['HTML5', 'CSS3', 'JavaScript'],
   },
   {
