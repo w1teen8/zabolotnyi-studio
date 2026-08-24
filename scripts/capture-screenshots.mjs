@@ -6,17 +6,18 @@ import fs from 'node:fs';
 
 // keep in sync with src/data/projects.ts
 const projects = [
+  ['cleaning-website', 'https://w1teen8.github.io/cleaning-website/'],
   ['glow-grammar', 'https://glowgrammar.com'],
-  ['upgrade-nmt', 'https://w1teen8.github.io/upgrade-nmt/'],
+  ['upgrade-nmt', 'https://upgradenmt.com'],
   ['bonforme', 'https://w1teen8.github.io/bonforme/'],
-  ['4sezona', 'https://w1teen8.github.io/4sezona/'],
+  ['svoi-gastrocafe', 'https://w1teen8.github.io/svoi-gastrocafe/'],
   ['marafet-studio', 'https://w1teen8.github.io/marafet-studio/'],
   ['lubianskaia-irina', 'https://w1teen8.github.io/lubianskaia-irina/'],
   ['studio-alony-lukyanenko', 'https://w1teen8.github.io/studio-alony-lukyanenko/'],
   ['manik-mammy', 'https://w1teen8.github.io/manik_mammy/'],
   ['yanina', 'https://w1teen8.github.io/yanina/'],
   ['mafia-club-kyiv', 'https://w1teen8.github.io/mafia-club-kyiv/'],
-  ['svoi-gastrocafe', 'https://w1teen8.github.io/svoi-gastrocafe/'],
+  ['4sezona', 'https://w1teen8.github.io/4sezona/'],
   ['cafe-garmonia', 'https://w1teen8.github.io/cafe-garmonia/'],
   ['dim-tattoo', 'https://w1teen8.github.io/dim-tattoo/'],
 ];

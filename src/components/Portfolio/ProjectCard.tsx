@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import type { Project } from '../../data/projects';
 import { screenshots } from '../../data/screenshots';
@@ -13,16 +13,30 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   const [flipped, setFlipped] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
   const [scrollVars, setScrollVars] = useState({ depth: 0, duration: 4 });
 
-  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    const img = e.currentTarget;
+  const recalcScroll = () => {
+    const img = imgRef.current;
     const box = viewportRef.current;
-    if (!box) return;
+    if (!img || !box || !img.naturalWidth || !box.clientWidth) return;
     const displayedHeight = img.naturalHeight * (box.clientWidth / img.naturalWidth);
     const depth = Math.max(0, displayedHeight - box.clientHeight);
     setScrollVars({ depth, duration: Math.min(14, Math.max(3, depth / 130)) });
   };
+
+  const handleImageLoad = () => recalcScroll();
+
+  // Screen width/breakpoint changes (or fonts settling after mount) can resize
+  // the card after the image already loaded — keep the scroll depth in sync so
+  // the hover preview always stops exactly at the bottom of the site.
+  useEffect(() => {
+    const box = viewportRef.current;
+    if (!box) return;
+    const observer = new ResizeObserver(() => recalcScroll());
+    observer.observe(box);
+    return () => observer.disconnect();
+  }, []);
 
   const mx = useMotionValue(0.5);
   const my = useMotionValue(0.5);
@@ -99,6 +113,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             }
           >
             <img
+              ref={imgRef}
               src={screenshots[project.id]}
               alt={project.name}
               className="project-card__shot"
