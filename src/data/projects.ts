@@ -68,9 +68,9 @@ export const projects: Project[] = [
   },
   {
     id: 'lubianskaia-irina',
-    name: 'Ірина Лубянська',
+    name: 'Ірина Любʼянська',
     url: 'https://w1teen8.github.io/lubianskaia-irina/',
-    description: 'Персональний сайт майстра краси з портфоліо робіт та формою запису.',
+    description: 'Сайт персонального стиліста з портфоліо образів та записом на консультацію.',
     category: 'Краса',
     tech: ['HTML5', 'CSS3', 'JavaScript'],
   },
