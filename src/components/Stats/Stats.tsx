@@ -4,16 +4,17 @@ import './Stats.css';
 
 interface StatItem {
   value: number;
+  prefix?: string;
   suffix: string;
   label: string;
   display?: string;
 }
 
 const stats: StatItem[] = [
-  { value: 13, suffix: '+', label: 'Проєктів' },
+  { value: 14, suffix: '+', label: 'Проєктів' },
   { value: 0, suffix: '', label: 'Ніш бізнесу', display: '∞' },
   { value: 100, suffix: '%', label: 'Адаптивні сайти' },
-  { value: 3, suffix: '–7 днів', label: 'Середній термін розробки' },
+  { value: 7, prefix: 'від ', suffix: ' днів', label: 'Термін розробки' },
 ];
 
 export default function Stats() {
@@ -32,7 +33,7 @@ export default function Stats() {
             {stat.display ? (
               <span className="stat-number">{stat.display}</span>
             ) : (
-              <Counter value={stat.value} suffix={stat.suffix} />
+              <Counter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
             )}
             <span className="stats__label">{stat.label}</span>
           </motion.div>

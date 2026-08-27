@@ -3,11 +3,12 @@ import { motion, useInView } from 'framer-motion';
 
 interface CounterProps {
   value: number;
+  prefix?: string;
   suffix?: string;
   duration?: number;
 }
 
-export default function Counter({ value, suffix = '', duration = 1.6 }: CounterProps) {
+export default function Counter({ value, prefix = '', suffix = '', duration = 1.6 }: CounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
   const [display, setDisplay] = useState(0);
@@ -29,6 +30,7 @@ export default function Counter({ value, suffix = '', duration = 1.6 }: CounterP
 
   return (
     <motion.span ref={ref} className="stat-number">
+      {prefix}
       {display}
       {suffix}
     </motion.span>
